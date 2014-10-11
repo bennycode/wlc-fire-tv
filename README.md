@@ -1,6 +1,13 @@
 We Love Coding - Amazon Fire TV App
 ===========
 
+## Technology Stack
+
+- Java 1.8
+- Android 4.2.2 (API level 17, Jelly Bean)
+- Amazon Fire TV SDK (Fire OS 3.0)
+- Ant 1.9.4
+
 ## Guidance
 
 1. [Setting Up Your Development Environment](https://developer.amazon.com/public/solutions/devices/fire-tv/docs/setting-up-your-development-environment)
