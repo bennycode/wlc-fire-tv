@@ -15,3 +15,13 @@ We Love Coding - Amazon Fire TV App
 - [Google I/O Android App](https://github.com/google/iosched)
 - [RoboSpice REST / Caching](https://github.com/stephanenicolas/robospice)
 - [Android Query](https://github.com/androidquery/androidquery)
+
+```
+adb kill-server
+adb start-server
+adb connect 192.168.178.74
+
+adb install "out/production/wlc-fire-tv/-tv.apk"
+adb install -r "out/production/wlc-fire-tv/-tv.apk"
+adb shell am start -n com.welovecoding.app.firetv/.MainActivity
+```
