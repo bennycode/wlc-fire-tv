@@ -16,7 +16,7 @@ We Love Coding - Amazon Fire TV App
 - [Google I/O Android App](https://github.com/google/iosched)
 - [RoboSpice REST / Caching](https://github.com/stephanenicolas/robospice)
 - [Android Query](https://github.com/androidquery/androidquery)
-- [Android for NetBeans (nbandroid)[http://nbandroid.org/wiki/index.php/Installation]
+- [Android for NetBeans (nbandroid)](http://nbandroid.org/wiki/index.php/Installation)
 
 ```
 adb kill-server
