@@ -34,13 +34,13 @@ public class ItemListActivity extends Activity
     setContentView(R.layout.activity_item_list);
 
     if (findViewById(R.id.item_detail_container) != null) {
-            // The detail container view will be present only in the
+      // The detail container view will be present only in the
       // large-screen layouts (res/values-large and
       // res/values-sw600dp). If this view is present, then the
       // activity should be in two-pane mode.
       mTwoPane = true;
 
-            // In two-pane mode, list items should be given the
+      // In two-pane mode, list items should be given the
       // 'activated' state when touched.
       ((ItemListFragment) getFragmentManager()
               .findFragmentById(R.id.item_list))
@@ -57,7 +57,7 @@ public class ItemListActivity extends Activity
   @Override
   public void onItemSelected(String id) {
     if (mTwoPane) {
-            // In two-pane mode, show the detail view in this activity by
+      // In two-pane mode, show the detail view in this activity by
       // adding or replacing the detail fragment using a
       // fragment transaction.
       Bundle arguments = new Bundle();
@@ -69,7 +69,7 @@ public class ItemListActivity extends Activity
               .commit();
 
     } else {
-            // In single-pane mode, simply start the detail activity
+      // In single-pane mode, simply start the detail activity
       // for the selected item ID.
       Intent detailIntent = new Intent(this, ItemDetailActivity.class);
       detailIntent.putExtra(ItemDetailFragment.ARG_ITEM_ID, id);
