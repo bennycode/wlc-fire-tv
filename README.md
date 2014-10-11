@@ -14,3 +14,4 @@ We Love Coding - Amazon Fire TV App
 - [UI Overview](http://developer.android.com/guide/topics/ui/controls.html)
 - [Google I/O Android App](https://github.com/google/iosched)
 - [RoboSpice REST / Caching](https://github.com/stephanenicolas/robospice)
+- [Android Query](https://github.com/androidquery/androidquery)
