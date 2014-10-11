@@ -1,6 +1,14 @@
 We Love Coding - Amazon Fire TV App
 ===========
 
+## Build & Run
+
+```
+ant debug && run.bat
+```
+
+## Hints
+
 ```
 adb kill-server
 adb start-server
