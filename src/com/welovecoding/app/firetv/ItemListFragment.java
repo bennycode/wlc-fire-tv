@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.welovecoding.app.firetv.dummy.DummyContent;
+import com.welovecoding.app.firetv.dummy.DummyItem;
 
 /**
  * A list fragment representing a list of Items. This fragment also supports
@@ -72,7 +73,7 @@ public class ItemListFragment extends ListFragment {
     super.onCreate(savedInstanceState);
 
     // TODO: replace with a real list adapter.
-    setListAdapter(new ArrayAdapter<DummyContent.DummyItem>(
+    setListAdapter(new ArrayAdapter<DummyItem>(
             getActivity(),
             android.R.layout.simple_list_item_activated_1,
             android.R.id.text1,
@@ -114,7 +115,7 @@ public class ItemListFragment extends ListFragment {
   public void onListItemClick(ListView listView, View view, int position, long id) {
     super.onListItemClick(listView, view, position, id);
 
-        // Notify the active callbacks interface (the activity, if the
+    // Notify the active callbacks interface (the activity, if the
     // fragment is attached to one) that an item has been selected.
     mCallbacks.onItemSelected(DummyContent.ITEMS.get(position).id);
   }
@@ -133,7 +134,7 @@ public class ItemListFragment extends ListFragment {
    * given the 'activated' state when touched.
    */
   public void setActivateOnItemClick(boolean activateOnItemClick) {
-        // When setting CHOICE_MODE_SINGLE, ListView will automatically
+    // When setting CHOICE_MODE_SINGLE, ListView will automatically
     // give items the 'activated' state when touched.
     getListView().setChoiceMode(activateOnItemClick
             ? ListView.CHOICE_MODE_SINGLE

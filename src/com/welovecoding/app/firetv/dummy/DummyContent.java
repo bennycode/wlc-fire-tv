@@ -25,9 +25,9 @@ public class DummyContent {
 
   static {
     // Add 3 sample items.
-    addItem(new DummyItem("1", "We love coding!!!"));
-    addItem(new DummyItem("2", "Item 2"));
-    addItem(new DummyItem("3", "Item 3"));
+    addItem(new DummyItem("1", "Android"));
+    addItem(new DummyItem("2", "Java"));
+    addItem(new DummyItem("3", "Python"));
   }
 
   private static void addItem(DummyItem item) {
@@ -35,22 +35,4 @@ public class DummyContent {
     ITEM_MAP.put(item.id, item);
   }
 
-  /**
-   * A dummy item representing a piece of content.
-   */
-  public static class DummyItem {
-
-    public String id;
-    public String content;
-
-    public DummyItem(String id, String content) {
-      this.id = id;
-      this.content = content;
-    }
-
-    @Override
-    public String toString() {
-      return content;
-    }
-  }
 }
