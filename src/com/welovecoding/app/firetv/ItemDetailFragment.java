@@ -1,4 +1,4 @@
-package com.example.wlc;
+package com.welovecoding.app.firetv;
 
 import android.os.Bundle;
 import android.app.Fragment;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import com.example.wlc.dummy.DummyContent;
+import com.welovecoding.app.firetv.dummy.DummyContent;
 
 /**
  * A fragment representing a single Item detail screen.

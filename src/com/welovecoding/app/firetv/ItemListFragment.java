@@ -1,4 +1,4 @@
-package com.example.wlc;
+package com.welovecoding.app.firetv;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
-import com.example.wlc.dummy.DummyContent;
+import com.welovecoding.app.firetv.dummy.DummyContent;
 
 /**
  * A list fragment representing a list of Items. This fragment

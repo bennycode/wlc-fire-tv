@@ -1,4 +1,4 @@
-package com.example.wlc.dummy;
+package com.welovecoding.app.firetv.dummy;
 
 import java.util.ArrayList;
 import java.util.HashMap;

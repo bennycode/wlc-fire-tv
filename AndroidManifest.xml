@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.wlc"
+    package="com.welovecoding.app.firetv"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -30,7 +30,7 @@
             android:parentActivityName=".ItemListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.wlc.ItemListActivity" />
+                android:value="com.welovecoding.app.firetv.ItemListActivity" />
         </activity>
     </application>
 
