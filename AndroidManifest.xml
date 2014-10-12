@@ -43,6 +43,23 @@
         android:name="android.support.PARENT_ACTIVITY"
         android:value="com.welovecoding.app.firetv.ItemListActivity" />
     </activity>
+    
+    <!-- Category -->
+    <activity
+      android:name=".activity.MainActivity"
+      android:label="@string/app_name"
+      android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    
+    <!-- Playlist -->
+    <activity
+      android:name=".activity.PlaylistActivity"
+      android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
+    </activity>
 
     <!-- Services -->
     <service
