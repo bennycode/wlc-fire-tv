@@ -20,14 +20,14 @@ import com.welovecoding.app.firetv.model.json.WeatherResult;
  */
 public class SampleSpiceActivity extends BaseSampleSpiceActivity {
 
-    // ============================================================================================
+  // ============================================================================================
   // ATTRIBUTES
   // ============================================================================================
   private TextView mLoremTextView;
 
   private SampleSpiceRequest weatherRequest;
 
-    // ============================================================================================
+  // ============================================================================================
   // ACTIVITY LIFE CYCLE
   // ============================================================================================
   @Override
@@ -51,7 +51,7 @@ public class SampleSpiceActivity extends BaseSampleSpiceActivity {
     getSpiceManager().execute(weatherRequest, "json", DurationInMillis.ONE_MINUTE, new WeatherRequestListener());
   }
 
-    // ============================================================================================
+  // ============================================================================================
   // INNER CLASSES
   // ============================================================================================
   public final class WeatherRequestListener implements RequestListener< WeatherResult> {
@@ -63,7 +63,7 @@ public class SampleSpiceActivity extends BaseSampleSpiceActivity {
 
     @Override
     public void onRequestSuccess(final WeatherResult result) {
-      Toast.makeText(SampleSpiceActivity.this, "Benny is here.", Toast.LENGTH_SHORT).show();
+      Toast.makeText(SampleSpiceActivity.this, "Nerd kid", Toast.LENGTH_SHORT).show();
       String originalText = getString(R.string.textview_text);
       mLoremTextView.setText(originalText + result.getWeather().getCurren_weather().get(0).getTemp());
     }

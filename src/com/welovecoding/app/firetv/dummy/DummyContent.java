@@ -27,6 +27,8 @@ public class DummyContent {
     // Add 3 sample items.
     addItem(new DummyItem("1", "Android"));
     addItem(new DummyItem("2", "Java"));
+    addItem(new DummyItem("22", "Giraffe"));
+    addItem(new DummyItem("222", "Giraffee"));
     addItem(new DummyItem("3", "Python"));
     addItem(new DummyItem("4", "Zebra"));
   }
