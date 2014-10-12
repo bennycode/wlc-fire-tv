@@ -105,7 +105,7 @@ public class MainActivity extends BaseSpiceActivity
     getSpiceManager().execute(restRequest, "json", DurationInMillis.ONE_MINUTE, new CategoryRequestListener());
   }
 
-  public final class CategoryRequestListener implements RequestListener<Category> {
+  public final class CategoryRequestListener implements RequestListener<String> {
 
     @Override
     public void onRequestFailure(SpiceException spiceException) {
@@ -114,9 +114,9 @@ public class MainActivity extends BaseSpiceActivity
     }
 
     @Override
-    public void onRequestSuccess(final Category category) {
+    public void onRequestSuccess(final String categories) {
       Toast.makeText(MainActivity.this, "success", Toast.LENGTH_SHORT).show();
-      Log.i(ANDROID_APP_TAG, category.getName());
+      Log.i(ANDROID_APP_TAG, categories);
     }
   }
 }
