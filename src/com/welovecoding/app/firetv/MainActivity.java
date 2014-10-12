@@ -2,7 +2,8 @@ package com.welovecoding.app.firetv;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
+import android.util.Log;
+import com.welovecoding.app.firetv.robospice.BaseSpiceActivity;
 
 /**
  * An activity representing a list of Items. This activity has different
@@ -19,7 +20,7 @@ import android.app.Activity;
  * This activity also implements the required {@link ItemListFragment.Callbacks}
  * interface to listen for item selections.
  */
-public class MainActivity extends Activity
+public class MainActivity extends BaseSpiceActivity
         implements ItemListFragment.Callbacks {
 
   /**
@@ -31,6 +32,13 @@ public class MainActivity extends Activity
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
+    String tag = "wlc-fire-tv";
+    String message = "Hello World";
+
+    // Log info
+    Log.i(tag, message);
+
     setContentView(R.layout.activity_item_list);
 
     if (findViewById(R.id.item_detail_container) != null) {
