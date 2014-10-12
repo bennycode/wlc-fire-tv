@@ -3,6 +3,12 @@ package com.welovecoding.app.firetv;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
+import com.octo.android.robospice.persistence.DurationInMillis;
+import com.octo.android.robospice.persistence.exception.SpiceException;
+import com.octo.android.robospice.request.listener.RequestListener;
+import com.welovecoding.app.firetv.data.Category;
+import com.welovecoding.app.firetv.rest.CategoryRequest;
 import com.welovecoding.app.firetv.robospice.BaseSpiceActivity;
 
 /**
@@ -22,6 +28,9 @@ import com.welovecoding.app.firetv.robospice.BaseSpiceActivity;
  */
 public class MainActivity extends BaseSpiceActivity
         implements ItemListFragment.Callbacks {
+
+  public static final String ANDROID_APP_TAG = "wlc-fire-tv";
+  private CategoryRequest restRequest;
 
   /**
    * Whether or not the activity is in two-pane mode, i.e. running on a tablet
@@ -56,6 +65,7 @@ public class MainActivity extends BaseSpiceActivity
     }
 
     // TODO: If exposing deep links into your app, handle intents here.
+    restRequest = new CategoryRequest();
   }
 
   /**
@@ -82,6 +92,31 @@ public class MainActivity extends BaseSpiceActivity
       Intent detailIntent = new Intent(this, ItemDetailActivity.class);
       detailIntent.putExtra(ItemDetailFragment.ARG_ITEM_ID, id);
       startActivity(detailIntent);
+    }
+  }
+
+  @Override
+  protected void onStart() {
+    super.onStart();
+
+    setProgressBarIndeterminate(false);
+    setProgressBarVisibility(true);
+
+    getSpiceManager().execute(restRequest, "json", DurationInMillis.ONE_MINUTE, new CategoryRequestListener());
+  }
+
+  public final class CategoryRequestListener implements RequestListener<Category> {
+
+    @Override
+    public void onRequestFailure(SpiceException spiceException) {
+      Toast.makeText(MainActivity.this, "failure", Toast.LENGTH_SHORT).show();
+      Log.w(ANDROID_APP_TAG, spiceException.getMessage());
+    }
+
+    @Override
+    public void onRequestSuccess(final Category category) {
+      Toast.makeText(MainActivity.this, "success", Toast.LENGTH_SHORT).show();
+      Log.i(ANDROID_APP_TAG, category.getName());
     }
   }
 }
