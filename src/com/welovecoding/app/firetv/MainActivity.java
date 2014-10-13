@@ -7,7 +7,7 @@ import android.widget.Toast;
 import com.octo.android.robospice.persistence.DurationInMillis;
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.request.listener.RequestListener;
-import com.welovecoding.app.firetv.data.Category;
+import com.welovecoding.app.firetv.data.CategoryResult;
 import com.welovecoding.app.firetv.rest.CategoryRequest;
 import com.welovecoding.app.firetv.robospice.BaseSpiceActivity;
 
@@ -105,7 +105,7 @@ public class MainActivity extends BaseSpiceActivity
     getSpiceManager().execute(restRequest, "json", DurationInMillis.ONE_MINUTE, new CategoryRequestListener());
   }
 
-  public final class CategoryRequestListener implements RequestListener<String> {
+  public final class CategoryRequestListener implements RequestListener<CategoryResult> {
 
     @Override
     public void onRequestFailure(SpiceException spiceException) {
@@ -114,9 +114,9 @@ public class MainActivity extends BaseSpiceActivity
     }
 
     @Override
-    public void onRequestSuccess(final String categories) {
+    public void onRequestSuccess(final CategoryResult result) {
       Toast.makeText(MainActivity.this, "success", Toast.LENGTH_SHORT).show();
-      Log.i(ANDROID_APP_TAG, categories);
+      Log.i(ANDROID_APP_TAG, "Found categories: " + result.getCategories().size());
     }
   }
 }
